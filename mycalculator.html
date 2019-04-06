@@ -1,0 +1,56 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<form>
+<br>
+	<input type="text" name="txt1" id="Son1" placeholder="Son kiriting"> <br> <br>  
+	<input type="text" name="txt2" id="Son2" placeholder="Son kiriting"> <br><br>
+	<select id="hello">
+		<option>+</option>
+		<option>-</option>
+		<option>*</option>
+		<option>:</option>
+		<option>Kvadratga_oshirish</option>
+		<option>Ildiz</option>
+	</select><br><br>
+	<button type="button" onclick="myfun()">Hisoblash</button>
+	<input type="reset" name="nn" value="O'chirish">
+	<h1 id="demo"></h1> 
+    
+	<script type="text/javascript">
+		function myfun()
+	{
+		var a = document.getElementById('Son1').value;
+		var b = document.getElementById('Son2').value;
+		var s = document.getElementById('hello').value;
+		switch(s)
+		{
+			case "+":document.getElementById('demo').innerHTML = parseFloat(a) + parseFloat(b);
+			break;
+
+			case "-":document.getElementById('demo').innerHTML = a - b;
+			break;
+
+			case "*":document.getElementById('demo').innerHTML = a * b;
+			break;
+
+			case ":":document.getElementById('demo').innerHTML = a / b;
+			break;
+
+			case "Kvadratga_oshirish":document.getElementById('demo').innerHTML = Math.pow(a,b);
+			break;
+
+			case "Ildiz":document.getElementById('demo').innerHTML = Math.sqrt(a);
+			break;			
+
+
+		}	
+
+		
+	}
+	</script>
+</form>
+</body>
+</html>
